@@ -1,9 +1,9 @@
 import './Header.css'
 
-function Header() {
+function Header({ clicks, text }) {
   const style = {
     color: 'blue',
-    fontSize: '2rem',
+    fontSize: '1rem',
     width: '100%',
     display: 'flex',
     justifyContent: 'center'
@@ -12,6 +12,9 @@ function Header() {
   return (
     <header className="container" style={style}>
       <h1>Заголовок</h1>
+
+      <p>{clicks}</p>
+      <p>{text}</p>
     </header>
   )
 }

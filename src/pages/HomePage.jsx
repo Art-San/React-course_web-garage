@@ -1,20 +1,16 @@
-import { Button } from '../components/Button'
-import { TaskList } from '../components/TaskList'
-import TextComponent from '../components/TextComponent'
-import { UserList } from '../components/UserList'
-
 import './HomePage.css'
 
-function HomePage() {
+function HomePage({ clicks, setClicks }) {
+  const handleClick = () => {
+    setClicks((x) => x + 1)
+    setClicks((prev) => prev + 1)
+    setClicks((prev) => prev + 1)
+  }
   return (
-    <div className="home-page">
-      <h2>Домашняя страница</h2>
-      <p>Добро пожаловать на наш сайт!</p>
-      <Button />
-      <UserList />
-      <TextComponent />
-      <TaskList />
-    </div>
+    <>
+      <button onClick={handleClick}>Нажми меня</button>
+      <p>Счет: {clicks}</p>
+    </>
   )
 }
 
