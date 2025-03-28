@@ -1,26 +1,38 @@
+// import { Greeting } from './Greeting'
+// import { Notification } from './Notification'
+// import { UserProfile } from './UserProfile'
+// import { TodoList } from './TodoList'
+import { WelcomeMessage } from './WelcomeMessage'
 import './HomePage.css'
 
 function HomePage() {
-  function handleEvent(event) {
-    switch (event.type) {
-      case 'click':
-        alert('Нажата кнопка')
-        break
-      case 'mouseenter':
-        console.log('Наведен курсор')
-        break
-      default:
-        console.log('нифига')
-        break
-    }
-  }
+  // const messages = ['Сообщение 1', 'Сообщение 2']
+  // const user = {
+  //   name: 'Иван',
+  //   age: 25
+  // }
+
+  // const todos = [
+  //   { id: 1, text: 'Изучить React', completed: true },
+  //   { id: 2, text: 'Создать проект', completed: false },
+  //   { id: 3, text: 'Создать бота', completed: true }
+  // ]
+
+  const isLoggedIn = true
 
   return (
     <>
-      <div onClick={handleEvent} onMouseEnter={handleEvent}>
-        {' '}
-        нажми или наведите
-      </div>
+      {/* <Greeting isLoggedIn={true} /> */}
+      {/* <Greeting isLoggedIn={false} /> */}
+
+      {/* <Notification messages={messages} /> */}
+      {/* <Notification messages={[]} /> */}
+
+      {/* <UserProfile user={user} /> */}
+      {/* <UserProfile user={null} /> */}
+
+      {/* <TodoList todos={todos} /> */}
+      <WelcomeMessage isLoggedIn={isLoggedIn} />
     </>
   )
 }
