@@ -1,8 +1,8 @@
 import { useForm } from 'react-hook-form'
-import { Input } from '../components/CustomForms/Input'
-import { Select } from '../components/CustomForms/Select'
-import { Checkbox } from '../components/CustomForms/CheckBox'
-import { Textarea } from '../components/CustomForms/Textarea'
+import { Input } from '../components/CustomForm/Input'
+import { Select } from '../components/CustomForm/Select'
+import { Checkbox } from '../components/CustomForm/CheckBox'
+import { Textarea } from '../components/CustomForm/Textarea'
 import './CustomForm.css'
 
 // НЕ ЗАБУДЬТЕ УСТАНОВИТЬ ЗАВИСИМОСТИ: npm install

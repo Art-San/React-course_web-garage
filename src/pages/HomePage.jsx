@@ -1,10 +1,12 @@
-import RegForm from '../components/RegForm/RegForm'
+import { SignupForm } from './SignupForm'
+import { CustomForm } from './CustomForm'
 import './HomePage.css'
 
 function HomePage() {
   return (
     <>
-      {/* <RegForm /> */}
+      {/* <SignupForm /> */}
+      <CustomForm />
       <h1>Главная страница</h1>
     </>
   )
