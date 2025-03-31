@@ -4,7 +4,8 @@ import './HomePage.css'
 function HomePage() {
   return (
     <>
-      <RegForm />
+      {/* <RegForm /> */}
+      <h1>Главная страница</h1>
     </>
   )
 }
