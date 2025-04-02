@@ -1,16 +1,20 @@
-import {
-  EnhancedComponent1,
-  EnhancedComponent2,
-  EnhancedComponent3
-} from '../components/EnhancedComponent'
+import Container from './Container'
 import './HomePage.css'
+import { ModalPage } from './ModalPage'
 
 function HomePage() {
   return (
     <>
-      <EnhancedComponent1 />
-      <EnhancedComponent2 />
-      <EnhancedComponent3 />
+      {/* <Container>
+        <h2>Это дочерний компоненнт</h2>
+      </Container>
+      <Container>
+        <h2>Это дочерний компоненнт</h2>
+      </Container>
+      <Container>
+        <h2>Это дочерний компоненнт</h2>
+      </Container> */}
+      <ModalPage />
     </>
   )
 }
