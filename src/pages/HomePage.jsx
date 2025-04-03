@@ -1,20 +1,10 @@
-import Container from './Container'
+import Button from '../components/Button/Button'
 import './HomePage.css'
-import { ModalPage } from './ModalPage'
 
 function HomePage() {
   return (
     <>
-      {/* <Container>
-        <h2>Это дочерний компоненнт</h2>
-      </Container>
-      <Container>
-        <h2>Это дочерний компоненнт</h2>
-      </Container>
-      <Container>
-        <h2>Это дочерний компоненнт</h2>
-      </Container> */}
-      <ModalPage />
+      <Button />
     </>
   )
 }
