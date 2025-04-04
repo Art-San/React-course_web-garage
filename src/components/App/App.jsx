@@ -1,45 +1,34 @@
 import { useState } from 'react'
-import Header from '../Header/Header'
-import HomePage from '../../pages/HomePage'
-import { Footer } from '../Footer/Footer'
-import './App.css'
-import { ThemeProvider } from 'styled-components'
-import { GlobalStyle } from '../../global.styled'
+import { Button } from '../Button/Button'
 
 function App() {
-  const [theme, setTheme] = useState(() => {
-    const savedTheme = localStorage.getItem('theme')
-    return savedTheme ? savedTheme : 'light'
-  })
-
-  const lightTheme = {
-    body: '#FFF',
-    text: '#363537'
-    // Другие стили светлой темы
-  }
-
-  const darkTheme = {
-    body: '#363537',
-    text: '#FAFAFA'
-    // Другие стили темной темы
-  }
+  const [theme, setTheme] = useState('light')
 
   const toggleTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light'
-    setTheme(newTheme)
-    localStorage.setItem('theme', newTheme)
+    setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'))
   }
-
   return (
-    <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
-      <GlobalStyle />
-      <main className="app">
-        <Header />
-        <button onClick={toggleTheme}>Сменить тему</button>
-        <HomePage />
-        <Footer />
-      </main>
-    </ThemeProvider>
+    <div
+      data-theme={theme}
+      className="flex flex-col items-center dark:bg-green-950 h-screen"
+    >
+      <h2 className="text-[1rem] dark:text-white ddd:text-red-500">
+        React + Tailwind
+      </h2>
+      <Button />
+      <div className="mx-auto py-20 w-2/3 perspective-distant">
+        <button
+          onClick={toggleTheme}
+          className="bg-amber-900 px-3 py-1 rounded text-white cursor-pointer"
+        >
+          Переключить тему
+        </button>
+        <iframe
+          src="https://player.vimeo.com/video/76979871"
+          className="mx-auto w-[300px] aspect-video transform-3d rotate-x-60 rotate-z-35"
+        />
+      </div>
+    </div>
   )
 }
 
